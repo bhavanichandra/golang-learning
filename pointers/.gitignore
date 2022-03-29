@@ -1,6 +1,6 @@
 
-# Created by https://www.toptal.com/developers/gitignore/api/go
-# Edit at https://www.toptal.com/developers/gitignore?templates=go
+# Created by https://www.toptal.com/developers/gitignore/api/go,intellij
+# Edit at https://www.toptal.com/developers/gitignore?templates=go,intellij
 
 ### Go ###
 # If you prefer the allow list template instead of the deny list, see community template:
@@ -29,4 +29,3 @@ go.work
 /vendor/
 /Godeps/
 .idea/
-# End of https://www.toptal.com/developers/gitignore/api/go
