@@ -15,17 +15,15 @@ var reader = bufio.NewReader(os.Stdin)
 func getUserMetrics() (float64, float64) {
 
 	fmt.Print(info.WeightPrompt)
-	weightInput, _ := reader.ReadString('\n')
+	weight := getInput()
 	fmt.Print(info.HeightPrompt)
-	heightInput, _ := reader.ReadString('\n')
-
-	weight := parseFloat(weightInput)
-	height := parseFloat(heightInput)
+	height := getInput()
 
 	return weight, height
 }
 
-func parseFloat(input string) float64 {
+func getInput() float64 {
+	input, _ := reader.ReadString('\n')
 	convertedInput := strings.Replace(input, "\r\n", "", -1)
 	parsedInput, _ := strconv.ParseFloat(convertedInput, 64)
 	return parsedInput
