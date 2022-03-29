@@ -1,8 +1,19 @@
 package main
 
-import "fmt"
+import (
+	"github.com/bhavanichandra/bmi/info"
+)
 
 func main() {
-	fmt.Println("Hello World")
-	// Output usage information to user
+	// Output information
+	info.PrintWelcome()
+	weight, height := getUserMetrics()
+	//Calculate BMI
+	bmi := calculateBMI(weight, height)
+	// Output BMI
+	printBMI(bmi)
+}
+
+func calculateBMI(weight float64, height float64) float64 {
+	return weight / (height * height)
 }
