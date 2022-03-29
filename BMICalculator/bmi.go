@@ -14,6 +14,7 @@ func main() {
 	printBMI(bmi)
 }
 
+// calculateBMI calculates BMI for passed weight and height parameters
 func calculateBMI(weight float64, height float64) float64 {
 	return weight / (height * height)
 }
