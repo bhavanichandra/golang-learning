@@ -12,6 +12,7 @@ import (
 
 var reader = bufio.NewReader(os.Stdin)
 
+// getUserMetrics function returns user entered metrics
 func getUserMetrics() (float64, float64) {
 
 	fmt.Print(info.WeightPrompt)
@@ -22,6 +23,7 @@ func getUserMetrics() (float64, float64) {
 	return weight, height
 }
 
+// getInput finction, fetches input from user, returns the parsed data
 func getInput() float64 {
 	input, _ := reader.ReadString('\n')
 	convertedInput := strings.Replace(input, "\r\n", "", -1)
