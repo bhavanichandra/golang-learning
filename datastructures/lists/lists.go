@@ -1,4 +1,4 @@
-package main
+package lists
 
 import "fmt"
 
@@ -12,7 +12,7 @@ func NewProduct(id string, title string, price float64) *Product {
 	return &Product{id, title, price}
 }
 
-func main() {
+func practices() {
 	hobbies := [3]string{"Reading", "Swimming", "Cycling"}
 
 	fmt.Println(hobbies)
@@ -36,10 +36,9 @@ func main() {
 		*NewProduct("a-book", "A great book", 25.99),
 		*NewProduct("a-carpet", "Great Carpet", 29.99),
 	}
-
+	fmt.Println(products)
 	products = append(products, *NewProduct("another-book", "Another great book", 59.99))
 	fmt.Println(products)
-
 }
 
 func courseContent() {
@@ -47,8 +46,14 @@ func courseContent() {
 	fmt.Println(prices[0:1])
 	prices[1] = 9.99
 
-	updatedPrices := append(prices, 5.99)
-	fmt.Println(updatedPrices, prices)
+	prices = append(prices, 5.99, 12.99, 29.99, 100.10)
+	fmt.Println(prices)
+
+	discountPrices := []float64{101.99, 80.99, 20.99}
+	prices = append(prices, discountPrices...)
+
+	fmt.Println(prices)
+
 }
 
 //func main() {
