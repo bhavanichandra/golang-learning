@@ -3,10 +3,16 @@ package interaction
 import (
 	"fmt"
 	"os"
+	"path/filepath"
+
+	"github.com/common-nighthawk/go-figure"
 )
 
 func PrintGreeting() {
-	fmt.Println("MONSTER SLAYER")
+	//fmt.Println("MONSTER SLAYER")
+	asciiFigure := figure.NewColorFigure("MONSTER SLAYER", "", "green", true)
+	asciiFigure.Print()
+
 	fmt.Println("Starting a new game..!")
 	fmt.Println("Good Luck!")
 }
@@ -22,14 +28,24 @@ func ShowAvailableActions(isSpecialRound bool) {
 }
 
 func DeclareWinner(winner string) {
+
 	fmt.Println("---------------------------")
-	fmt.Println("Game Over.")
+	asciiFigure := figure.NewColorFigure("Game Over.", "", "red", true)
+	asciiFigure.Print()
 	fmt.Println("---------------------------")
 	fmt.Printf("%v won!\n", winner)
 }
 
 func WriteLog(rounds *[]RoundData) {
-	file, err := os.Create("game-log.txt")
+	executable, err := os.Executable()
+	if err != nil {
+		fmt.Println("Saving a logfile fail. Exiting..!")
+		return
+	}
+
+	executablePath := filepath.Dir(executable)
+
+	file, err := os.Create(executablePath + "/game-log.txt")
 	if err != nil {
 		fmt.Println("Saving a logfile fail. Exiting..!")
 		return
@@ -46,7 +62,15 @@ func WriteLog(rounds *[]RoundData) {
 }
 
 func WriteLogMap(rounds *[]RoundData) {
-	file, err := os.Create("game-log-map.txt")
+
+	executable, err := os.Executable()
+	if err != nil {
+		fmt.Println("Saving a logfile fail. Exiting..!")
+		return
+	}
+
+	executablePath := filepath.Dir(executable)
+	file, err := os.Create(executablePath + "/game-log-map.txt")
 	if err != nil {
 		fmt.Println("Saving a logfile fail. Exiting..!")
 		return
