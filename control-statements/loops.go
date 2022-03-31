@@ -76,7 +76,27 @@ func calculateManuallyEnteredSum() {
 	fmt.Printf("result: %v\n", sum)
 }
 
-func calculateListSum() {}
+func calculateListSum() {
+	fmt.Println("Please enter a comma-separated list of numbers")
+	inputNumberList, err := reader.ReadString('\n')
+	if err != nil {
+		fmt.Println("Invalid Input")
+		return
+	}
+	inputNumberList = cleanInput(inputNumberList)
+	inputNumbers := strings.Split(inputNumberList, ",")
+	sum := 0
+	for index, value := range inputNumbers {
+		fmt.Printf("Index: %v, Value: %v\n", index, value)
+		number, err := strconv.ParseInt(value, 0, 64)
+		if err != nil {
+			fmt.Printf("Skipping value: %v | Reason: %v", value, err)
+			continue
+		}
+		sum = sum + int(number)
+	}
+	fmt.Printf("result: %v\n", sum)
+}
 
 func getUserChoice() (string, error) {
 	fmt.Println("Operations")
