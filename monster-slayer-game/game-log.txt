@@ -1,0 +1,44 @@
+Player attacked monster for 16 damange.
+Monster attacked player for 10 damange.
+Player Health: 84
+Monster Health: 90
+Player healed for 16 .
+Monster attacked player for 10 damange.
+Player Health: 86
+Monster Health: 90
+Player performed a strong attack monster for 14 damange.
+Monster attacked player for 22 damange.
+Player Health: 72
+Monster Health: 68
+Player healed for 20 .
+Monster attacked player for 22 damange.
+Player Health: 79
+Monster Health: 68
+Player attacked monster for 15 damange.
+Monster attacked player for 13 damange.
+Player Health: 64
+Monster Health: 55
+Player performed a strong attack monster for 14 damange.
+Monster attacked player for 24 damange.
+Player Health: 50
+Monster Health: 31
+Player healed for 21 .
+Monster attacked player for 24 damange.
+Player Health: 55
+Monster Health: 31
+Player healed for 26 .
+Monster attacked player for 24 damange.
+Player Health: 66
+Monster Health: 31
+Player performed a strong attack monster for 15 damange.
+Monster attacked player for 20 damange.
+Player Health: 51
+Monster Health: 11
+Player healed for 23 .
+Monster attacked player for 20 damange.
+Player Health: 61
+Monster Health: 11
+Player attacked monster for 16 damange.
+Monster attacked player for 14 damange.
+Player Health: 45
+Monster Health: -3
