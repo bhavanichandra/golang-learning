@@ -16,6 +16,10 @@ var functions = template.FuncMap{}
 
 var app *config.AppConfig
 
+func AddDefaultData(td *models.TemplateData) *models.TemplateData {
+	return td
+}
+
 // NewTemplates sets the config for the template package
 func NewTemplates(a *config.AppConfig) {
 	app = a
@@ -36,8 +40,8 @@ func RenderTemplate(w http.ResponseWriter, tmpl string, data *models.TemplateDat
 		log.Fatal("Could not get template from Template Cache")
 	}
 	buf := new(bytes.Buffer)
-	reason := myTemplate.Execute(buf, data)
-	log.Println("Error", reason)
+	data = AddDefaultData(data)
+	_ = myTemplate.Execute(buf, data)
 	_, err := buf.WriteTo(w)
 	if err != nil {
 		fmt.Println("Error writing template to browser", err)
