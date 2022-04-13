@@ -1,0 +1,7 @@
+mode: set
+github.com/bhavanichandra/golang-learning/testing/main.go:8.13,10.16 2 0
+github.com/bhavanichandra/golang-learning/testing/main.go:14.2,14.51 1 0
+github.com/bhavanichandra/golang-learning/testing/main.go:10.16,13.3 2 0
+github.com/bhavanichandra/golang-learning/testing/main.go:17.52,19.12 2 1
+github.com/bhavanichandra/golang-learning/testing/main.go:22.2,23.20 2 1
+github.com/bhavanichandra/golang-learning/testing/main.go:19.12,21.3 1 1
